@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #bec7da;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,20 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.cards {
+  display: block;
+}
+
+.card-item {
+    float: left;
+    padding: 10px;
+    margin: 20px;
+    text-align: left;
+    min-width: 250px;
+    background-color: lightgoldenrodyellow;
+    
 }
 
 @keyframes App-logo-spin {
