@@ -21,11 +21,11 @@ componentWillMount() {
          <MuiThemeProvider>
             <div class="card-item">
                 <h2>Hotel: {booking.hotel_details[0].name} </h2>
-                <h3>Location: {booking.hotel_details[0].location} </h3>
-                <h3>Room No: {booking.room_details[0].no}</h3>
-                <h3>From Date: {booking.from} </h3>
-                <h3>To Date: {booking.to} </h3>
-                <h3>No of People: {booking.no_of_people} </h3>
+                <h4>Location: {booking.hotel_details[0].location} </h4>
+                <h4>Room No: {booking.room_details[0].no}</h4>
+                <h4>From Date: {booking.from} </h4>
+                <h4>To Date: {booking.to} </h4>
+                <h4>No of People: {booking.no_of_people} </h4>
             </div>
          </MuiThemeProvider>
         );

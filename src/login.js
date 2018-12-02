@@ -15,7 +15,8 @@ constructor(props){
   this.state={
     username:'',
     password:'',
-    isLogin: false
+    // isLogin: false,
+    errorMessage: ''
   }
  }
 
@@ -41,6 +42,8 @@ render() {
                />
              <br/>
              <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+             <br/>
+              <h4 class="error-message"> {this.state.errorMessage} </h4>
          </div>
          <div>
           Not registered yet ?  <a href="/register">Register Now</a> 
@@ -64,9 +67,15 @@ render() {
       if (response.status === 200) {
           this.setState({isLogin:true})
          window.location = "/dashboard"
-      }    
-    }).catch(function (error) {
-    console.log(error);
+      } else {
+        this.setState({
+          errorMessage: "Invalid Credentials, username or password is incorrect."
+        });
+      }
+    }).catch(error => {
+      this.setState({
+        errorMessage: "Invalid Credentials, username or password is incorrect."
+      });
     });
   }
 }
